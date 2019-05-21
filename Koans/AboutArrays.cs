@@ -77,10 +77,10 @@ namespace DotNetCoreKoans.Koans
             var array = new[] { 1, 2 };
             var stack = new Stack(array);
             stack.Push("last");
-            // Assert.Equal(FILL_ME_IN, stack.ToArray());
+            Assert.Equal(new object[] { "last", 2, 1}, stack.ToArray());
             var poppedValue = stack.Pop();
             Assert.Equal("last", poppedValue);
-            // Assert.Equal(FILL_ME_IN, stack.ToArray());
+            Assert.Equal(new object[] { 2, 1 }, stack.ToArray());
         }
 
         [Step(6)]
